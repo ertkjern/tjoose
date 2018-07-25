@@ -19,4 +19,8 @@ export class HomeComponent implements OnInit {
   createNewTjoose() {
     this.router.navigate(['create']);
   }
+
+  joinTjoose() {
+    this.router.navigate(['join']);
+  }
 }

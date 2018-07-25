@@ -1,6 +1,6 @@
 @import "../../../styles/styles";
 
-.tjoose-settings{
+.join-tjoose{
   width: 100%;
   text-align: center;
   margin-top: 25vh;
@@ -16,7 +16,19 @@
     font-size: 18px;
   }
 
-  .settings{
+  .pin{
     margin-top: 75px;
+    width: 100%;
+    text-align: center;
+    .standard-input{
+      margin: auto;
+      display: block;
+    }
+    .green-button{
+      margin: auto;
+      margin-top: 35px;
+      display: block;
+      width: 185px;
+    }
   }
 }
