@@ -6,6 +6,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {TjooseSettingsComponent} from './tjoose-settings/tjoose-settings.component';
 import {HomeRouterModule} from './home.route';
 import {JoinTjooseComponent} from './join-tjoose/join-tjoose.component';
+import {BackComponent} from './back/back.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import {JoinTjooseComponent} from './join-tjoose/join-tjoose.component';
   exports: [],
   declarations: [
     HomeComponent,
+    BackComponent,
     JoinTjooseComponent,
     TjooseSettingsComponent
   ],

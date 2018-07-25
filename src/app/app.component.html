@@ -1,3 +1,10 @@
-<main>
-  <router-outlet></router-outlet>
+
+<div class="header">
+  <img class="main-logo" src="./assets/images/tjooselogo.png">
+  <h2 class="sub-header">Helping people decide</h2>
+</div>
+
+<main [@routerTransition]="getState(o)">
+  <router-outlet #o="outlet"></router-outlet>
 </main>
+

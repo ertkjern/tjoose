@@ -1,8 +1,6 @@
 .green-button{
   width: 135px;
   height: 45px;
-  margin-left: 30px;
-  marin-right: 30px;
   font-size: 18px;
   color: $button-font-color;
   background-color: $green-button-color;
@@ -13,11 +11,19 @@
 .blue-button{
   width: 135px;
   height: 45px;
-  margin-left: 30px;
-  marin-right: 30px;
   font-size: 18px;
   color: $button-font-color;
   background-color: $blue-button-color;
   border: 2px solid $blue-button-color;
+  border-radius: 10px;
+}
+
+.abort-button{
+  width: 135px;
+  height: 45px;
+  font-size: 18px;
+  color: $button-font-color;
+  background-color: $gray-button-color;
+  border: 2px solid $gray-button-color;
   border-radius: 10px;
 }

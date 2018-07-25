@@ -3,21 +3,10 @@
 .join-tjoose{
   width: 100%;
   text-align: center;
-  margin-top: 25vh;
   color: $primar-font-color;
 
-  .main-logo{
-    width: 275px;
-    height: auto;
-  }
-
-  .sub-header{
-    margin-top: -15px;
-    font-size: 18px;
-  }
-
   .pin{
-    margin-top: 75px;
+    margin-top: $margin-from-header;
     width: 100%;
     text-align: center;
     .standard-input{
