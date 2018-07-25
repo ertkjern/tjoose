@@ -1,9 +1,28 @@
 <div class="tjoose-settings">
   <div class="settings">
-    <h2>YO</h2>
+    <h1 class="header">General settings</h1>
+
+    <form class="settings-form">
+
+      <mat-checkbox color="accent" class="form-input">Share with others?</mat-checkbox>
+
+      <mat-checkbox color="accent" class="form-input">Anyone with pin can add options</mat-checkbox>
+
+      <mat-select placeholder="Options for users to add" class="form-input">
+        <mat-option *ngFor="let o of numberOfoptions" [value]="o.value">
+          {{o.viewValue}}
+        </mat-option>
+      </mat-select>
+
+    </form>
+
+    <div class="create-button">
+      <button mat-flat-button color="primary" class="mat-button-overrides create">Create</button>
+    </div>
   </div>
 
-  <app-back></app-back>
-
+  <div class="back">
+    <app-back></app-back>
+  </div>
 
 </div>

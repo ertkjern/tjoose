@@ -5,6 +5,10 @@
   text-align: center;
   color: $primar-font-color;
 
+  .header{
+    text-align: center;
+  }
+
   .pin{
     margin-top: $margin-from-header;
     width: 100%;
@@ -13,11 +17,10 @@
       margin: auto;
       display: block;
     }
-    .green-button{
-      margin: auto;
+    .join-button{
       margin-top: 35px;
-      display: block;
-      width: 185px;
+      width: 200px;
+
     }
   }
 }

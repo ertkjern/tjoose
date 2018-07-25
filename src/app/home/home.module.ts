@@ -8,6 +8,7 @@ import {HomeRouterModule} from './home.route';
 import {JoinTjooseComponent} from './join-tjoose/join-tjoose.component';
 import {BackComponent} from './back/back.component';
 import {SharedModule} from '../shared/shared.module';
+import {MatButtonModule, MatCheckboxModule, MatInputModule, MatSelectModule} from '@angular/material';
 
 @NgModule({
   imports: [
@@ -15,6 +16,10 @@ import {SharedModule} from '../shared/shared.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     HomeRouterModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
     SharedModule
   ],
   exports: [],

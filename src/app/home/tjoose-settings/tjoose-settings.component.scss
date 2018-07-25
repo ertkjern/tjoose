@@ -1,11 +1,34 @@
 @import "../../../styles/styles";
 
 .tjoose-settings{
-  width: 100%;
-  text-align: center;
+  width: 250px;
+  min-height: 500px;
+  margin: auto;
   color: $primar-font-color;
+
+  .form-input{
+    margin-top: 30px;
+  }
+
+  .header{
+    margin-top: 30px;
+    text-align: center;
+  }
 
   .settings{
     margin-top: $margin-from-header;
+  }
+
+  .back{
+    text-align: center;
+  }
+
+  .create-button {
+    width: 100%;
+    margin-top: 35px;
+    text-align: center;
+    .create {
+      width: 200px;
+    }
   }
 }
