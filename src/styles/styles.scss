@@ -2,6 +2,7 @@
 @import "common/variables";
 @import "common/buttons";
 @import "common/input";
+@import "common/animations";
 
 html, body {
   height: 100%;
@@ -11,4 +12,10 @@ html, body {
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+}
+
+.load-main{
+  width: 100%;
+  text-align: center;
+  margin-top: 25vh;
 }

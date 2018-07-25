@@ -7,13 +7,15 @@ import {TjooseSettingsComponent} from './tjoose-settings/tjoose-settings.compone
 import {HomeRouterModule} from './home.route';
 import {JoinTjooseComponent} from './join-tjoose/join-tjoose.component';
 import {BackComponent} from './back/back.component';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HomeRouterModule
+    HomeRouterModule,
+    SharedModule
   ],
   exports: [],
   declarations: [
