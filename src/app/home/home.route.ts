@@ -2,6 +2,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from './home.component';
 import {TjooseSettingsComponent} from './tjoose-settings/tjoose-settings.component';
 import {JoinTjooseComponent} from './join-tjoose/join-tjoose.component';
+import {TjooseComponent} from "./tjoose/tjoose.component";
 
 
 const HOME_ROUTES: Routes = [
@@ -19,6 +20,14 @@ const HOME_ROUTES: Routes = [
     path: 'join',
     component: JoinTjooseComponent,
     data: { state: 'join'}
+  },
+  {
+    path: 'tjoose',
+    component: TjooseComponent
+  },
+  {
+    path: 'tjoose/:id',
+    component: TjooseComponent
   }
 ];
 

@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {routerTransition} from './shared/animations/router.animations';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -9,11 +10,15 @@ import {routerTransition} from './shared/animations/router.animations';
 })
 export class AppComponent {
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   getState(outlet) {
     return outlet.activatedRouteData.state;
+  }
+
+  navigateHome() {
+    this.router.navigate(['home']);
   }
 
 }

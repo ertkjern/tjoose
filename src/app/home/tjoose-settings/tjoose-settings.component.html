@@ -1,24 +1,29 @@
-<div class="tjoose-settings">
+<div *ngIf="!isLoading" class="tjoose-settings">
   <div class="settings">
+
     <h1 class="header">General settings</h1>
 
-    <form class="settings-form">
+    <form class="settings-form" [formGroup]='tjooseSettingsForm' novalidate
+          (ngSubmit)="createTjoose(tjooseSettingsForm.value)">
 
-      <mat-checkbox color="accent" class="form-input">Share with others?</mat-checkbox>
+      <mat-checkbox formControlName="public" color="accent" class="form-input">Share with others?</mat-checkbox>
 
-      <mat-checkbox color="accent" class="form-input">Anyone with pin can add options</mat-checkbox>
+      <mat-checkbox formControlName="everyoneCanEdit" color="accent" class="form-input">Anyone with PIN can edit?
+      </mat-checkbox>
 
-      <mat-select placeholder="Options for users to add" class="form-input">
+      <mat-select formControlName="numberOfOptions" placeholder="Options for users to add" class="form-input">
         <mat-option *ngFor="let o of numberOfoptions" [value]="o.value">
           {{o.viewValue}}
         </mat-option>
       </mat-select>
 
+
+      <div class="create-button">
+        <button type="submit" mat-flat-button color="primary" class="mat-button-overrides create">Create</button>
+      </div>
+      <p *ngIf="showError" class="error">Something went wrong...</p>
     </form>
 
-    <div class="create-button">
-      <button mat-flat-button color="primary" class="mat-button-overrides create">Create</button>
-    </div>
   </div>
 
   <div class="back">
@@ -26,3 +31,8 @@
   </div>
 
 </div>
+
+<div *ngIf="isLoading">
+  <app-loading></app-loading>
+</div>
+

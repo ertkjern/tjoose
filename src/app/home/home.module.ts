@@ -9,11 +9,17 @@ import {JoinTjooseComponent} from './join-tjoose/join-tjoose.component';
 import {BackComponent} from './back/back.component';
 import {SharedModule} from '../shared/shared.module';
 import {MatButtonModule, MatCheckboxModule, MatInputModule, MatSelectModule} from '@angular/material';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {CommonModule} from '@angular/common';
+import {TjooseComponent} from './tjoose/tjoose.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    CommonModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     HomeRouterModule,
     MatCheckboxModule,
@@ -27,7 +33,8 @@ import {MatButtonModule, MatCheckboxModule, MatInputModule, MatSelectModule} fro
     HomeComponent,
     BackComponent,
     JoinTjooseComponent,
-    TjooseSettingsComponent
+    TjooseSettingsComponent,
+    TjooseComponent
   ],
   providers: [],
 })

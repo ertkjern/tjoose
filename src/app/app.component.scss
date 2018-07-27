@@ -7,6 +7,9 @@
   .main-logo{
     width: 275px;
     height: auto;
+    &:hover{
+      cursor: pointer;
+    }
   }
 
   .sub-header{
