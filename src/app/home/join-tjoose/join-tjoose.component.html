@@ -1,8 +1,9 @@
 <div class="join-tjoose">
   <div class="pin">
     <label hidden>Enter PIN</label>
-    <input class="standard-input" type="text" placeholder="Enter PIN...">
-    <button mat-flat-button color="primary" class="mat-button-overrides join-button">Join</button>
+    <input [(ngModel)]="pin" class="standard-input" type="text" placeholder="Enter PIN...">
+    <span class="pin-error" *ngIf="showError">You need to provide a valid PIN</span>
+    <button (click)="joinTjoose()" mat-flat-button color="primary" class="mat-button-overrides join-button">Join</button>
   </div>
 
   <app-back></app-back>

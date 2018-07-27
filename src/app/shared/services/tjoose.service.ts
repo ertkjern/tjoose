@@ -3,6 +3,7 @@ import {AngularFirestore, AngularFirestoreDocument} from 'angularfire2/firestore
 import {Tjoose} from '../interfaces/tjoose.interface';
 import {Observable} from 'rxjs';
 import {take} from 'rxjs/internal/operators';
+import {el} from "@angular/platform-browser/testing/src/browser_util";
 
 @Injectable()
 export class TjooseService {
@@ -24,6 +25,19 @@ export class TjooseService {
       }));
   }
 
+  pinExists(pin): Promise<boolean> {
+    return new Promise(resolve => {
+      this.afs.firestore.doc('tjooses/' + pin).get()
+        .then(docSnapshot => {
+          if (docSnapshot.exists) {
+            resolve(true);
+          } else {
+            resolve(false);
+          }
+        });
+    });
+  }
+
   getTjoose(pin: string): Observable<Tjoose> {
     this.tjooses = this.afs.doc('tjooses/' + pin);
     return this.tjooses.valueChanges();
@@ -33,27 +47,14 @@ export class TjooseService {
   private generatePin(): Promise<string> {
     return new Promise(resolve => {
       const newPin = Math.floor((Math.random() * 100000) + 1).toString(); // Mocked ID
-      this.afs.firestore.doc('tjooses/' + newPin).get()
-        .then(docSnapshot => {
-          if (docSnapshot.exists) {
-            this.generatePin();
-          } else {
-            resolve(newPin);
-          }
-        });
+      this.pinExists(newPin).then(result => {
+        if (result) {
+          this.generatePin();
+        } else {
+          resolve(newPin);
+        }
+      });
     });
   }
 
 }
-
-/**
-
- this.shirts = this.shirtCollection.snapshotChanges().pipe(
- map(actions => actions.map(a => {
-        const data = a.payload.doc.data() as Shirt;
-        const id = a.payload.doc.id;
-        return { id, ...data };
-      }))
- );
-
- */
